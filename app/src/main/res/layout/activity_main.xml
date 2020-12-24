@@ -243,7 +243,7 @@
     <EditText
         android:id="@+id/result"
         android:layout_width="340dp"
-        android:layout_height="55dp"
+        android:layout_height="65dp"
         android:focusable="false"
         android:gravity="end"
         android:textAlignment="viewEnd"
