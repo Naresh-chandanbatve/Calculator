@@ -245,11 +245,7 @@
     <EditText
         android:id="@+id/result"
         android:layout_width="340dp"
-<<<<<<< HEAD
         android:layout_height="110dp"
-=======
-        android:layout_height="65dp"
->>>>>>> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
         android:focusable="false"
         android:gravity="end"
         android:textAlignment="viewEnd"
@@ -260,18 +256,14 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.337" />
-=======
-        app:layout_constraintVertical_bias="0.375" />
->>>>>>> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
+        app:layout_constraintVertical_bias="0.375" /> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
 
     <TextView
         android:id="@+id/operand"
         android:layout_width="340dp"
         android:layout_height="55dp"
         android:focusable="false"
-<<<<<<< HEAD
         android:gravity="end"
         android:textAlignment="viewEnd"
         android:textColor="@color/white"
@@ -300,28 +292,16 @@
         android:layout_width="340dp"
         android:layout_height="55dp"
         android:focusable="false"
-<<<<<<< HEAD
-        android:gravity="end"
-        android:textAlignment="viewEnd"
-=======
         android:textAlignment="viewEnd"
         android:gravity="end"
->>>>>>> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128" />
-=======
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
->>>>>>> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
 
     <Button
         android:id="@+id/buttonc"
