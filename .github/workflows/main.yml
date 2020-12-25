@@ -40,7 +40,7 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v2.2.1
         with:
-          name: mifos-mobile
+          name: Calculator
           path: app/build/outputs/apk/debug/
 
   lintCheck:
@@ -53,7 +53,7 @@ jobs:
       - name: Static Analysis
         run: ./gradlew lint
 
-      - name: Upload Static Analysis Report For Mifos-Mobile Module
+      - name: Upload Static Analysis Report For Calculator Module
         uses: actions/upload-artifact@v2.2.1
         if: failure()
         with:
