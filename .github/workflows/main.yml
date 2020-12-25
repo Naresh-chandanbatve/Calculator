@@ -10,38 +10,40 @@ on:
       - 'development'
       - 'master'
 
+
 jobs:
-  build:
-    name: Build APK
+  test:
+    name: Run Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checking out repository
-        uses: actions/checkout@v2
-
-        # Set up JDK
-      - name: Set Up JDK 1.8
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup JDK
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-
-        # Install NDK
-      - name: Install NDK
-        run: echo "y" | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --install "ndk;20.0.5594570" --sdk_root=${ANDROID_SDK_ROOT}
-
-        # Update Gradle Permission
-      - name: Change gradlew Permission
-        run: chmod +x gradlew
-
-        # Build App
-      - name: Build with Gradle
-        run: ./gradlew assemble
-
-        # Upload Built APK
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v2.2.1
+      - name: Run Tests
+        run: bash ./gradlew test --stacktrace  
+  apk:
+    name: Generate APK
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Build APK
+        run: bash ./gradlew assembleDebug --stacktrace
+      - name: Upload APK
+        uses: actions/upload-artifact@v1
         with:
           name: Calculator
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/Calculator.apk:
+
+
 
   lintCheck:
     name: Static Analysis
@@ -58,7 +60,7 @@ jobs:
         if: failure()
         with:
           name: Static Analysis Report
-          path: app/build/apk/debug/app-debug.apk
+          path: app/build/apk/debug/Calculator.apk
 
   pmd:
     name: PMD
@@ -75,4 +77,4 @@ jobs:
         if: failure()
         with:
           name: PMD Report
-          path: app/build/apk/debug/app-debug.apk
+          path: app/build/apk/debug/Calculator.apk
