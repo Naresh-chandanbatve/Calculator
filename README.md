@@ -16,3 +16,10 @@ This is a Calculator App That Can Calculate even long numbers.
 3) In The Artifacts section, click on Link On Link named app.    
 4) You will Download A zip File.    
 5) Extract the file in any folder and Install Calculator.apk file.    
+
+
+#  OR 
+
+
+1) Go to my website.
+2) And you can download directly apk.
