@@ -1,24 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-name: Android Pull Request & Master CI
+name: android Pull Request & Master CI
 
 on:
   pull_request:
