@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.1
         with:
           name: Calculator
-          path: app/build/outputs/apk/debug/
+          path: app/build/outputs/apk/debug/Calculator.apk
 
   lintCheck:
     name: Static Analysis
@@ -58,7 +58,7 @@ jobs:
         if: failure()
         with:
           name: Static Analysis Report
-          path: app/build/reports/
+          path: app/build/apk/debug/Calculator.apk
 
   pmd:
     name: PMD
@@ -75,4 +75,4 @@ jobs:
         if: failure()
         with:
           name: PMD Report
-          path: app/build/reports/
+          path: app/build/apk/debug/Calculator.apk
