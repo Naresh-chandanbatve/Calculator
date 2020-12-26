@@ -18,17 +18,17 @@ This is a Calculator App That Can Calculate even long numbers.
  ### step 1    
   
  
-   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example1.jpeg)   
+   ![step1](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example%20no.1.jpeg)   
 
 
 ### step 2
 
-   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/exampe2.jpeg)
+   ![step2](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example2.jpeg)
 
 
 ### step 3  
 
-   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example3.jpeg)
+   ![step3](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example3.jpeg)
 
 
 
