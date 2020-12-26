@@ -3,8 +3,32 @@
 This is a Calculator App That Can Calculate even long numbers.        
 <new> And can give accurate answers upto 12 digits after decimal point in Division.
 
-![home page](https://github.com/Naresh-chandanbatve/Calculator/images/homepage.jpeg)
 
+
+
+ ## HomeSreen  
+ 
+ 
+   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/homescreen.jpeg)  
+
+
+
+## Example of big number's Calculation  
+
+ ### step 1    
+  
+ 
+   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example1.jpeg)   
+
+
+### step 2
+
+   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/exampe2.jpeg)
+
+
+### step 3  
+
+   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example3.jpeg)
 
 
 
