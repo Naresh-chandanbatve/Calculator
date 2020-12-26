@@ -274,7 +274,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.218" />
-=======
         android:textAlignment="viewEnd"
         android:gravity="end"
         android:textSize="30dp"
@@ -285,7 +284,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.276" />
->>>>>>> 97f0a5e3c8f01e6d63871db5142c5a6908c1e980
 
     <TextView
         android:id="@+id/num1"
