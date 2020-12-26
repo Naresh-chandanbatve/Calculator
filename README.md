@@ -18,8 +18,8 @@ This is a Calculator App That Can Calculate even long numbers.
 5) Extract the file in any folder and Install Calculator.apk file.    
 
 
-#  OR 
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR 
 
 
-1) Go to my website.
+1) Go to my website given in my profile.
 2) And you can download directly apk.
