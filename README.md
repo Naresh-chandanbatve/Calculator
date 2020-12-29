@@ -8,32 +8,40 @@ This is a Calculator App That Can Calculate even long numbers.
 
  ## HomeSreen  
  
- 
-   ![home page](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/homescreen.jpeg)  
-
-
-
+   <img src="https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/homescreen.jpeg" height="400px" width="250px">
+       
+      
+     
+     
 ## Example of big number's Calculation  
 
- ### step 1    
+ #### step 1    
   
- 
-   ![step1](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example%20no.1.jpeg)   
+ <img src="https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example%20no.1.jpeg" height="400px" width="250px">
+  
+
+#### step 2
+
+<img src="https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example2.jpeg" height="400px" width="250px">
 
 
-### step 2
+#### step 3  
 
-   ![step2](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example2.jpeg)
-
-
-### step 3  
-
-   ![step3](https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example3.jpeg)
-
-
+<img src="https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/example3.jpeg" height="400px" width="250px">
+<br>
+<br>
+<br>
+<br>
 
 
 ## Steps To get The apk file Of This App
+
+1) Go to my website given in my profile.
+2) And you can download directly apk.
+
+
+# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR 
+
 
 1) Click On Actions Tab.    
 2) Then select The Latest Workflow of Master Branch.    
@@ -41,9 +49,3 @@ This is a Calculator App That Can Calculate even long numbers.
 4) You will Download A zip File.    
 5) Extract the file in any folder and Install Calculator.apk file.    
 
-
-# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR 
-
-
-1) Go to my website given in my profile.
-2) And you can download directly apk.
