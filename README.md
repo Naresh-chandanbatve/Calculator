@@ -3,14 +3,19 @@
 This is a Calculator App That Can Calculate even long numbers.        
 <new> And can give accurate answers upto 12 digits after decimal point in Division.
 
-
+<br>
+<br>
+<br>
 
 
  ## HomeSreen  
  
    <img src="https://github.com/Naresh-chandanbatve/Calculator/blob/master/images/homescreen.jpeg" height="400px" width="250px">
        
-      
+  <br>
+  <br>
+  <br>
+ 
      
      
 ## Example of big number's Calculation  
@@ -34,7 +39,7 @@ This is a Calculator App That Can Calculate even long numbers.
 <br>
 
 
-## Steps To get The apk file Of This App
+## :star: &nbsp; Steps To get The apk file Of This App
 
 1) Go to my website given in my profile.
 2) And you can download directly apk.
