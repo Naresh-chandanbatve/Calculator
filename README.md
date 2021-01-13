@@ -41,10 +41,11 @@ This is a Calculator App That Can Calculate even long numbers.
 
 ## :star: &nbsp; Steps To get The apk file Of This App
 
-1) Go to my website given in my profile.
-2) And you can download directly apk.
+1) Go to my website (Link given below or from my profile).
+2) Scroll down little and click on Download Latest version of my calculator App.
 
-
+<a href="htttp://naresh.scienceontheweb.net">Click Here For My Website</a>
+ 
 # &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR 
 
 
