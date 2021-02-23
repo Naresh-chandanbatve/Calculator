@@ -42,7 +42,7 @@ This is a Calculator App That Can Calculate even long numbers.
 ## :star: &nbsp; Steps To get The apk file Of This App
 
 1) Go to my website (Link given below or from my profile).
-2) Scroll down little and click on Download Latest version of my calculator App.    
+2) Scroll down little and click on "Download Latest version of my calculator App".    
 
 
  
