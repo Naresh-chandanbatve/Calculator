@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent opt = new Intent(MainActivity.this,option.class);
                 startActivity(opt);
-
+                finish();
             }
         });
 
@@ -676,34 +677,190 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                        {
                            int lnr = res.toString().length();
                            CharSequence resm= res.toString().subSequence(0,lnr-3);
-                           number1.setText(String.valueOf(resm));
+                           if (resm.toString().contains("E+"))
+                           {
+                               int ind_orn = resm.toString().indexOf("E");
+                               CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                               int ln =resm.length();
+                               int ind_pow = resm.toString().indexOf("+");
+                               CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(resm));
+                           }
                        }
                        else if(String.valueOf(res).endsWith(".0"))
                        {
                            int lnr = res.toString().length();
                            CharSequence resm= res.toString().subSequence(0,lnr-2);
-                           number1.setText(String.valueOf(resm));
+                           if (resm.toString().contains("E+"))
+                           {
+                               int ind_orn = resm.toString().indexOf("E");
+                               CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                               int ln =resm.length();
+                               int ind_pow = resm.toString().indexOf("+");
+                               CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(resm));
+                           }
                        }
                        else if (!String.valueOf(res).contains("."))
                        {
-                           number1.setText(String.valueOf(res));
+                           if (res.toString().contains("E+"))
+                           {
+                               int ind_orn = res.toString().indexOf("E");
+                               CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                               int ln =res.toString().length();
+                               int ind_pow = res.toString().indexOf("+");
+                               CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(res));
+                           }
                        }
 
                        else if(String.valueOf(res).endsWith(".000000000000"))
                        {
                            int lnr = res.toString().length();
                            CharSequence resm= res.toString().subSequence(0,lnr-13);
-                           number1.setText(String.valueOf(resm));
+                           if (resm.toString().contains("E+"))
+                           {
+                               int ind_orn = resm.toString().indexOf("E");
+                               CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                               int ln =resm.length();
+                               int ind_pow = resm.toString().indexOf("+");
+                               CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(resm));
+                           }
                        }
 
                        else if(zee)
                        {
                            CharSequence resm=res.stripTrailingZeros().toString();
-                           number1.setText(String.valueOf(resm));
+                           if (resm.toString().contains("E+"))
+                           {
+                               int ind_orn = resm.toString().indexOf("E");
+                               CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                               int ln =resm.length();
+                               int ind_pow = resm.toString().indexOf("+");
+                               CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(resm));
+                           }
                        }
                        else
                        {
-                           number1.setText(String.valueOf(res));
+                           if (res.toString().contains("E+"))
+                           {
+                               int ind_orn = res.toString().indexOf("E");
+                               CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                               int ln =res.toString().length();
+                               int ind_pow = res.toString().indexOf("+");
+                               CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                               int pow = Integer.parseInt(powc.toString());
+
+                               int orpow= 1;
+
+                               for (int i =0;i<pow;i++)
+                               {
+                                   orpow = orpow*10;
+                               }
+
+                               BigDecimal orp =new BigDecimal(orpow);
+
+                               BigDecimal orig = (BigDecimal) orignum;
+
+                               number1.setText(orig.multiply(orp).toString());
+
+                           }
+                           else
+                           {
+                               number1.setText(String.valueOf(res));
+                           }
                        }
 
 
@@ -778,34 +935,190 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-3);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if(String.valueOf(res).endsWith(".0"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-2);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if (!String.valueOf(res).contains("."))
                         {
-                            number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
                         else if(String.valueOf(res).endsWith(".000000000000"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-13);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
 
                         else if(zee)
                         {
                             CharSequence resm=res.stripTrailingZeros().toString();
-                           number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else
                         {
-                            number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
 
@@ -869,34 +1182,190 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-3);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if(String.valueOf(res).endsWith(".0"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-2);
-                           number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if (!String.valueOf(res).contains("."))
                         {
-                         number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
                         else if(String.valueOf(res).endsWith(".000000000000"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-13);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
 
                         else if(zee)
                         {
                             CharSequence resm=res.stripTrailingZeros().toString();
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else
                         {
-                          number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
 
@@ -959,34 +1428,190 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-3);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if(String.valueOf(res).endsWith(".0"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-2);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else if (!String.valueOf(res).contains("."))
                         {
-                            number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
                         else if(String.valueOf(res).endsWith(".000000000000"))
                         {
                             int lnr = res.toString().length();
                             CharSequence resm= res.toString().subSequence(0,lnr-13);
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
 
                         else if(zee)
                         {
                             CharSequence resm=res.stripTrailingZeros().toString();
-                            number1.setText(String.valueOf(resm));
+                            if (resm.toString().contains("E+"))
+                            {
+                                int ind_orn = resm.toString().indexOf("E");
+                                CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                int ln =resm.length();
+                                int ind_pow = resm.toString().indexOf("+");
+                                CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(resm));
+                            }
                         }
                         else
                         {
-                            number1.setText(String.valueOf(res));
+                            if (res.toString().contains("E+"))
+                            {
+                                int ind_orn = res.toString().indexOf("E");
+                                CharSequence orignum = res.toEngineeringString().subSequence(0,ind_orn-1);
+                                int ln =res.toString().length();
+                                int ind_pow = res.toString().indexOf("+");
+                                CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                int pow = Integer.parseInt(powc.toString());
+
+                                int orpow= 1;
+
+                                for (int i =0;i<pow;i++)
+                                {
+                                    orpow = orpow*10;
+                                }
+
+                                BigDecimal orp =new BigDecimal(orpow);
+
+                                BigDecimal orig = (BigDecimal) orignum;
+
+                                number1.setText(orig.multiply(orp).toString());
+
+                            }
+                            else
+                            {
+                                number1.setText(String.valueOf(res));
+                            }
                         }
 
 
@@ -1219,23 +1844,127 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                                {
                                    int lnr = res.toString().length();
                                    CharSequence resm= res.toString().subSequence(0,lnr-3);
-                                   display.setText(String.valueOf(resm));
+                                   if (resm.toString().contains("E+"))
+                                   {
+                                       int ind_orn = resm.toString().indexOf("E");
+                                       CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                       int ln =resm.length();
+                                       int ind_pow = resm.toString().indexOf("+");
+                                       CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                       int pow = Integer.parseInt(powc.toString());
+
+                                       int orpow= 1;
+
+                                       for (int i =0;i<pow;i++)
+                                       {
+                                           orpow = orpow*10;
+                                       }
+
+                                       BigDecimal orp =new BigDecimal(orpow);
+
+                                       BigDecimal orig = (BigDecimal) orignum;
+
+                                       display.setText(orig.multiply(orp).toString());
+
+                                   }
+                                   else
+                                   {
+                                       display.setText(String.valueOf(resm));
+                                   }
                                }
                                else if(String.valueOf(res).endsWith(".0"))
                                {
                                    int lnr = res.toString().length();
                                    CharSequence resm= res.toString().subSequence(0,lnr-2);
-                                   display.setText(String.valueOf(resm));
+                                   if (resm.toString().contains("E+"))
+                                   {
+                                       int ind_orn = resm.toString().indexOf("E");
+                                       CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                       int ln =resm.length();
+                                       int ind_pow = resm.toString().indexOf("+");
+                                       CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                       int pow = Integer.parseInt(powc.toString());
+
+                                       int orpow= 1;
+
+                                       for (int i =0;i<pow;i++)
+                                       {
+                                           orpow = orpow*10;
+                                       }
+
+                                       BigDecimal orp =new BigDecimal(orpow);
+
+                                       BigDecimal orig = (BigDecimal) orignum;
+
+                                       display.setText(orig.multiply(orp).toString());
+
+                                   }
+                                   else
+                                   {
+                                       display.setText(String.valueOf(resm));
+                                   }
                                }
                                else if (!String.valueOf(res).contains("."))
                                {
-                                   display.setText(String.valueOf(res));
+                                   if (res.toString().contains("E+"))
+                                   {
+                                       int ind_orn = res.toString().indexOf("E");
+                                       CharSequence orignum = res.toString().subSequence(0,ind_orn-1);
+                                       int ln =res.toString().length();
+                                       int ind_pow = res.toString().indexOf("+");
+                                       CharSequence powc= res.toString().subSequence(ind_pow+1,ln);
+                                       int pow = Integer.parseInt(powc.toString());
+
+                                       int orpow= 1;
+
+                                       for (int i =0;i<pow;i++)
+                                       {
+                                           orpow = orpow*10;
+                                       }
+
+                                       BigDecimal orp =new BigDecimal(orpow);
+
+                                       BigDecimal orig = (BigDecimal) orignum;
+
+                                       display.setText(orig.multiply(orp).toString());
+
+                                   }
+                                   else
+                                   {
+                                       display.setText(String.valueOf(res));
+                                   }
                                }
                                else if(String.valueOf(res).endsWith(".000000000000"))
                                {
                                    int lnr = res.toString().length();
                                    CharSequence resm= res.toString().subSequence(0,lnr-13);
-                                   display.setText(String.valueOf(resm));
+                                   if (resm.toString().contains("E+"))
+                                   {
+                                       int ind_orn = resm.toString().indexOf("E");
+                                       CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                       int ln =resm.length();
+                                       int ind_pow = resm.toString().indexOf("+");
+                                       CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                       int pow = Integer.parseInt(powc.toString());
+
+                                       int orpow= 1;
+
+                                       for (int i =0;i<pow;i++)
+                                       {
+                                           orpow = orpow*10;
+                                       }
+
+                                       BigDecimal orp =new BigDecimal(orpow);
+
+                                       BigDecimal orig = (BigDecimal) orignum;
+
+                                       display.setText(orig.multiply(orp).toString());
+
+                                   }
+                                   else
+                                   {
+                                       display.setText(String.valueOf(resm));
+                                   }
 
 
                                }
@@ -1243,7 +1972,36 @@ bttn1.setOnTouchListener(new View.OnTouchListener() {
                                else if(zee)
                                {
                                    CharSequence resm=res.stripTrailingZeros().toString();
-                                   display.setText(String.valueOf(resm));
+
+                                   if (resm.toString().contains("E+"))
+                                   {
+                                       int ind_orn = resm.toString().indexOf("E");
+                                       CharSequence orignum = resm.subSequence(0,ind_orn-1);
+                                        int ln =resm.length();
+                                       int ind_pow = resm.toString().indexOf("+");
+                                       CharSequence powc= resm.subSequence(ind_pow+1,ln);
+                                        int pow = Integer.parseInt(powc.toString());
+
+                                       int orpow= 1;
+
+                                       for (int i =0;i<pow;i++)
+                                       {
+                                           orpow = orpow*10;
+                                       }
+
+                                       BigDecimal orp =new BigDecimal(orpow);
+
+                                       BigDecimal orig = (BigDecimal) orignum;
+
+                                       display.setText(orig.multiply(orp).toString());
+
+                                   }
+                                   else
+                                   {
+                                       display.setText(String.valueOf(resm));
+                                   }
+
+
 
                                }
                                else
