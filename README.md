@@ -41,19 +41,9 @@ This is a Calculator App That Can Calculate even long numbers.
 
 ## :star: &nbsp; Steps To get The apk file Of This App
 
-1) Go to my website (Link given below or from my profile).
-2) Scroll down little and click on "Download Latest version of my calculator App".    
 
+1) Go to release section.    
+2) Then, assets.    
+3) Here You can download the apk file and run it on android.
 
- 
- &nbsp; &nbsp; &nbsp;  <a href="http://naresh.scienceontheweb.net">Click Here For My Website</a>
- 
- # &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR 
-
-
-1) Click On Actions Tab.    
-2) Then select The Latest Workflow of Master Branch.    
-3) In The Artifacts section, click on Link On Link named app.    
-4) You will Download A zip File.    
-5) Extract the file in any folder and Install Calculator.apk file.    
 
